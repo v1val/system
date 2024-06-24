@@ -15,7 +15,8 @@
   "extends": [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "next"
   ],
   "root": true,
   "env": {
@@ -41,6 +42,7 @@
     "react-refresh/only-export-components": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "error",
+    "react/display-name": "off",
     "unused-imports/no-unused-vars": [
       "warn",
       {
