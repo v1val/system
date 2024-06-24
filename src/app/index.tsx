@@ -3,12 +3,13 @@ import { BaseLayout } from "widgets/layouts";
 
 import { withProviders } from "./providers";
 
-const App = ({ Component, pageProps }: AppProps) => (
-  <>
-    <BaseLayout>
-      <Component {...pageProps} />
-    </BaseLayout>
-  </>
-);
-
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <>
+      <BaseLayout>
+        <Component {...pageProps} />
+      </BaseLayout>
+    </>
+  );
+};
 export default withProviders(App);

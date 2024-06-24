@@ -9,6 +9,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@babel/runtime": "^7.24.7",
     "@effector/next": "^0.7.0",
     "@radix-ui/react-switch": "^1.1.0",
     "effector": "^23.2.2",
