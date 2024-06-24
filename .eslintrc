@@ -24,7 +24,8 @@
   },
   "ignorePatterns": [
     "node_modules/",
-    "build/"
+    "build/",
+    "pages/"
   ],
   "rules": {
     "@typescript-eslint/explicit-module-boundary-types": "off",
