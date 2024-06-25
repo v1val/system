@@ -1,9 +1,10 @@
-import { atom } from "shared/ui/factory";
-import { createGate } from "effector-react";
+import { atom } from "shared/factory";
+import { createEvent } from "effector";
+import { NextPageContext } from "next";
 
 export const homeModel = atom(() => {
-  const HomePageGate = createGate();
+  const pageStarted = createEvent<NextPageContext>();
   return {
-    HomePageGate,
+    pageStarted,
   };
 });

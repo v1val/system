@@ -1,5 +1,5 @@
 import { createEvent, createStore } from "effector";
-import { atom } from "shared/ui/factory";
+import { atom } from "shared/factory";
 
 interface item {
   title: string;
@@ -8,6 +8,7 @@ interface item {
 
 export const menuDesktopModel = atom(() => {
   const toggleItem = createEvent<string>();
+  const searchChanged = createEvent<string>();
   const $openedItems = createStore<string[]>([]).on(
     toggleItem,
     (state, item) => {
@@ -88,5 +89,6 @@ export const menuDesktopModel = atom(() => {
     $menuStructure,
     $openedItems,
     toggleItem,
+    searchChanged,
   };
 });

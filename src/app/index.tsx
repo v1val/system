@@ -5,11 +5,9 @@ import { withProviders } from "./providers";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (
-    <>
-      <BaseLayout>
-        <Component {...pageProps} />
-      </BaseLayout>
-    </>
+    <BaseLayout>
+      <Component {...pageProps} />
+    </BaseLayout>
   );
 };
 export default withProviders(App);

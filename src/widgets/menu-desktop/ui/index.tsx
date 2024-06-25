@@ -3,17 +3,17 @@ import { Icons } from "shared/ui/icons";
 import { menuDesktopModel } from "widgets/menu-desktop";
 
 const renderMenuItems = (menuItems) => {
-  const [opened_items] = useUnit([menuDesktopModel.$openedItems]);
-  const handleOpen = (name: string) => {
-    menuDesktopModel.toggleItem(name);
-  };
+  const { opened_items } = useUnit({
+    opened_items: menuDesktopModel.$openedItems,
+  });
+
   return menuItems.map((item) => (
     <div key={item.id} className="flex justify-between">
       <span className="text-14">{item.title}</span>
       {item.children && (
         <Icons.chevronDown
           className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => handleOpen(item.title)}
+          onClick={() => menuDesktopModel.toggleItem(item.title)}
         />
       )}
       {opened_items.includes(item.title) && (
