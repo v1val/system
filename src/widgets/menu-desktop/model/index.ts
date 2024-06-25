@@ -1,10 +1,10 @@
 import { createEvent, createStore } from "effector";
 import { atom } from "shared/factory";
 
-interface item {
+export type ItemProps = {
   title: string;
-  children?: item[];
-}
+  children?: ItemProps[];
+};
 
 export const menuDesktopModel = atom(() => {
   const toggleItem = createEvent<string>();
@@ -21,7 +21,7 @@ export const menuDesktopModel = atom(() => {
     },
   );
 
-  const $menuStructure = createStore<item[]>([
+  const $menuStructure = createStore<ItemProps[]>([
     {
       title: "Управление заказами",
       children: [

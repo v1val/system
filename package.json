@@ -12,6 +12,8 @@
     "@babel/runtime": "^7.24.7",
     "@effector/next": "^0.7.0",
     "@radix-ui/react-switch": "^1.1.0",
+    "@types/compose-function": "^0.0.33",
+    "compose-function": "^3.0.3",
     "effector": "^23.2.2",
     "effector-react": "^23.2.1",
     "embla-carousel-react": "^8.1.5",
