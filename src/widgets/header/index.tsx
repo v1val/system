@@ -3,7 +3,7 @@ import { Icons, Switch } from "shared/ui";
 
 export const Header = () => {
   return (
-    <div className="w-full h-20 border-b border-grey-250 sticky top-0 bg-white">
+    <div className="w-full h-20 border-b border-grey-250 sticky top-0 bg-white z-10">
       <div className="container h-full flex flex-row justify-between items-center">
         <div className="flex flex-col">
           <span className="text-base text-16">ООО «Название бизнеса»</span>

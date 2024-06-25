@@ -8,24 +8,26 @@ const renderMenuItems = (menuItems) => {
   });
 
   return menuItems.map((item) => (
-    <div key={item.id} className="flex justify-between">
-      <span className="text-14">{item.title}</span>
-      {item.children && (
-        <Icons.chevronDown
-          className="w-[20px] h-[20px] cursor-pointer"
-          onClick={() => menuDesktopModel.toggleItem(item.title)}
-        />
-      )}
+    <>
+      <div key={item.id} className="flex justify-between">
+        <span className="text-14">{item.title}</span>
+        {item.children && (
+          <Icons.chevronDown
+            className="w-[20px] h-[20px] cursor-pointer"
+            onClick={() => menuDesktopModel.toggleItem(item.title)}
+          />
+        )}
+      </div>
       {opened_items.includes(item.title) && (
         <>{renderMenuItems(item.children)}</>
       )}
-    </div>
+    </>
   ));
 };
 export const MenuDesktop = () => {
   const { menu } = useUnit({ menu: menuDesktopModel.$menuStructure });
   return (
-    <div className="min-w-[200px] sticky top-[120px] flex flex-col gap-[24px]">
+    <div className="min-w-[200px] flex flex-col gap-[24px]">
       {renderMenuItems(menu)}
     </div>
   );

@@ -1,1 +1,2 @@
-export { SecondaryMenu } from "./ui.tsx";
+export * from "./model";
+export { SecondaryMenu } from "./ui";
